@@ -1,5 +1,5 @@
 <a name="asset_uploader"></a>
-## Integrating the Asset Uploader
+# Integrating the Asset Uploader
 
 *You can find the complete `AssetUploader` project for this guide in <a href="https://github.com/CreativeSDK/ios-getting-started-samples" target="_blank">GitHub</a>.*
 
@@ -7,7 +7,7 @@ Frameworks required to integrate for this feature: AdobeCreativeSDKAssetUX, Adob
 
 The `AdobeUXAssetUploaderViewController` class provides a simple user interface for selecting destination for uploading assets to creative cloud files, libraries and lightroom collections/catalogs. In the sample app, we randomly select images from set of 8 images in the resources and launch the upload component.
 
-### User Interface
+## User Interface
 The sample app consists of a single view controller with a button titled "Launch Uploader".
 
 <img style="border: 1px solid #ccc;" src="https://aviarystatic.s3.amazonaws.com/creativesdk/ios/assetuploader/launch.png" />
@@ -25,7 +25,21 @@ The table shows 3 items and then has a collapsible option to display more items.
 
 Users can select existing folder or create new folders to upload selected assets.
 
-### Code
+<a name="prerequisites"></a>
+
+## Prerequisites
+
+This guide will assume that you have installed all software and completed all of the steps in the following guides:
+
+*   [Getting Started](https://creativesdk.adobe.com/docs/ios/#/articles/gettingstarted/index.html)
+*   [Framework Dependencies](https://creativesdk.adobe.com/docs/ios/#/articles/dependencies/index.html) guide.
+
+_**Note:**_
+
+*   _This component requires that the user is **logged in with their Adobe ID**._
+*   _Your Client ID must be [approved for **Production Mode** by Adobe](https://creativesdk.zendesk.com/hc/en-us/articles/204601215-How-to-complete-the-Production-Client-ID-Request) before you release your app._
+
+## Code
 
 The single view controller of the application handles most of the work. The action handler `showAssetUploaderButtonTouchUpInside` method is responsible for initialising and presenting the uploader component as below:
 
